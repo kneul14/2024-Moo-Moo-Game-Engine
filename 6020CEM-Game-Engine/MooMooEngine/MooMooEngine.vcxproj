@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Dist|x64">
+      <Configuration>Dist</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D1C40B29-BD27-9BCD-66AD-D38352EF6650}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MooMooEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\Debug-windows-x86_64\MooMooEngine\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\MooMooEngine\</IntDir>
+    <TargetName>MooMooEngine</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\Release-windows-x86_64\MooMooEngine\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86_64\MooMooEngine\</IntDir>
+    <TargetName>MooMooEngine</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\Dist-windows-x86_64\MooMooEngine\</OutDir>
+    <IntDir>..\bin-int\Dist-windows-x86_64\MooMooEngine\</IntDir>
+    <TargetName>MooMooEngine</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>MooMooEngine_PCH.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;Middleware;Middleware\GLFW\include;Middleware\Glad\include;Middleware\spdlog\include;Middleware\imgui;Middleware\glm;Middleware\stb_image;Middleware\assimp\include;Middleware\EnTT\include;Middleware\jsoncpp\include;Middleware\PhysX\include;Middleware\Enet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;assimp-vc142-mtd.lib;jsoncpp.lib;PhysX_64.lib;PhysXCommon_64.lib;PhysXCooking_64.lib;PhysXExtensions_static_64.lib;PhysXFoundation_64.lib;enet64.lib;Ws2_32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Middleware\assimp\bin\windows\Debug;Middleware\assimp\lib\windows\Debug;Middleware\jsoncpp\lib;Middleware\PhysX\lib;Middleware\Enet\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST "..\MooMooEngine\Middleware\assimp\bin\windows\Debug\assimp-vc142-mtd.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\assimp\bin\windows\Debug\assimp-vc142-mtd.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\assimp\bin\windows\Debug\assimp-vc142-mtd.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\jsoncpp.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\jsoncpp.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\jsoncpp.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysX_64.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysX_64.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysX_64.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysXCommon_64.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCommon_64.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCommon_64.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysXCooking.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCooking.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCooking.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysXFoundation_64.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysXFoundation_64.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysXFoundation_64.dll" "..\bin\Debug-windows-x86_64\MooMooEngine" &gt; nul)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>MooMooEngine_PCH.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;Middleware;Middleware\GLFW\include;Middleware\Glad\include;Middleware\spdlog\include;Middleware\imgui;Middleware\glm;Middleware\stb_image;Middleware\assimp\include;Middleware\EnTT\include;Middleware\jsoncpp\include;Middleware\PhysX\include;Middleware\Enet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;assimp-vc142-mtd.lib;jsoncpp.lib;PhysX_64.lib;PhysXCommon_64.lib;PhysXCooking_64.lib;PhysXExtensions_static_64.lib;PhysXFoundation_64.lib;enet64.lib;Ws2_32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Middleware\assimp\bin\windows\Release;Middleware\assimp\lib\windows\Release;Middleware\jsoncpp\lib;Middleware\PhysX\lib;Middleware\Enet\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST "..\MooMooEngine\Middleware\assimp\bin\windows\Debug\assimp-vc142-mtd.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\assimp\bin\windows\Debug\assimp-vc142-mtd.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\assimp\bin\windows\Debug\assimp-vc142-mtd.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\jsoncpp.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\jsoncpp.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\jsoncpp.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysX_64.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysX_64.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysX_64.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysXCommon_64.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCommon_64.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCommon_64.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysXCooking.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCooking.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCooking.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysXFoundation_64.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysXFoundation_64.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysXFoundation_64.dll" "..\bin\Release-windows-x86_64\MooMooEngine" &gt; nul)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>MooMooEngine_PCH.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;Middleware;Middleware\GLFW\include;Middleware\Glad\include;Middleware\spdlog\include;Middleware\imgui;Middleware\glm;Middleware\stb_image;Middleware\assimp\include;Middleware\EnTT\include;Middleware\jsoncpp\include;Middleware\PhysX\include;Middleware\Enet\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>opengl32.lib;assimp-vc142-mtd.lib;jsoncpp.lib;PhysX_64.lib;PhysXCommon_64.lib;PhysXCooking_64.lib;PhysXExtensions_static_64.lib;PhysXFoundation_64.lib;enet64.lib;Ws2_32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>Middleware\assimp\bin\windows\Dist;Middleware\assimp\lib\windows\Dist;Middleware\jsoncpp\lib;Middleware\PhysX\lib;Middleware\Enet\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST "..\MooMooEngine\Middleware\assimp\bin\windows\Debug\assimp-vc142-mtd.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\assimp\bin\windows\Debug\assimp-vc142-mtd.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\assimp\bin\windows\Debug\assimp-vc142-mtd.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\jsoncpp.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\jsoncpp.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\jsoncpp.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysX_64.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysX_64.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysX_64.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysXCommon_64.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCommon_64.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCommon_64.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysXCooking.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCooking.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysXCooking.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul)
+IF EXIST "..\MooMooEngine\Middleware\dlls\PhysXFoundation_64.dll"\ (xcopy /Q /E /Y /I "..\MooMooEngine\Middleware\dlls\PhysXFoundation_64.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul) ELSE (xcopy /Q /Y /I "..\MooMooEngine\Middleware\dlls\PhysXFoundation_64.dll" "..\bin\Dist-windows-x86_64\MooMooEngine" &gt; nul)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Middleware\stb_image\stb_image.h" />
+    <ClInclude Include="src\Audio\AudioLayer.h" />
+    <ClInclude Include="src\Client\ClientLayer.h" />
+    <ClInclude Include="src\Core\Application.h" />
+    <ClInclude Include="src\Core\Core.h" />
+    <ClInclude Include="src\Core\EntryPoint.h" />
+    <ClInclude Include="src\Core\Input.h" />
+    <ClInclude Include="src\Core\KeyCodes.h" />
+    <ClInclude Include="src\Core\Layer.h" />
+    <ClInclude Include="src\Core\LayerStack.h" />
+    <ClInclude Include="src\Core\MouseButtonCodes.h" />
+    <ClInclude Include="src\Core\Timestep.h" />
+    <ClInclude Include="src\Core\Window.h" />
+    <ClInclude Include="src\DataManagement\FileLoader.h" />
+    <ClInclude Include="src\Editor\EditorLayer.h" />
+    <ClInclude Include="src\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Events\Event.h" />
+    <ClInclude Include="src\Events\KeyEvent.h" />
+    <ClInclude Include="src\Events\MouseEvent.h" />
+    <ClInclude Include="src\GraphicsAPI\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\IO\Models\Mesh.h" />
+    <ClInclude Include="src\IO\Models\MeshRegistry.h" />
+    <ClInclude Include="src\IO\Models\Model.h" />
+    <ClInclude Include="src\IO\Models\Vertex.h" />
+    <ClInclude Include="src\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Logging\Log.h" />
+    <ClInclude Include="src\MooMooEngine.h" />
+    <ClInclude Include="src\MooMooEngine_PCH.h" />
+    <ClInclude Include="src\Physics\BaseCollider.h" />
+    <ClInclude Include="src\Physics\PhysXBoxCollider.h" />
+    <ClInclude Include="src\Physics\PhysXSphereCollider.h" />
+    <ClInclude Include="src\Physics\PhysicsLayer.h" />
+    <ClInclude Include="src\Physics\RigidBodyComponent.h" />
+    <ClInclude Include="src\Platform\WindowsWindow.h" />
+    <ClInclude Include="src\Renderer\3D\Renderer3D.h" />
+    <ClInclude Include="src\Renderer\Camera\PerspectiveCamera.h" />
+    <ClInclude Include="src\Renderer\Camera\PerspectiveCameraController.h" />
+    <ClInclude Include="src\Renderer\Data\Framebuffer.h" />
+    <ClInclude Include="src\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Renderer\ObjectRenderer\ObjectRendererLayer.h" />
+    <ClInclude Include="src\Renderer\Shader\Shader.h" />
+    <ClInclude Include="src\Renderer\Shader\ShaderLibrary.h" />
+    <ClInclude Include="src\Renderer\Textures\Texture.h" />
+    <ClInclude Include="src\Renderer\Textures\Texture2D.h" />
+    <ClInclude Include="src\Scene\Components.h" />
+    <ClInclude Include="src\Scene\Entity.h" />
+    <ClInclude Include="src\Scene\Scene.h" />
+    <ClInclude Include="src\Scene\StateManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Middleware\stb_image\stb_image.cpp" />
+    <ClCompile Include="src\Audio\AudioLayer.cpp" />
+    <ClCompile Include="src\Client\ClientLayer.cpp" />
+    <ClCompile Include="src\Core\Application.cpp" />
+    <ClCompile Include="src\Core\Layer.cpp" />
+    <ClCompile Include="src\Core\LayerStack.cpp" />
+    <ClCompile Include="src\DataManagement\FileLoader.cpp" />
+    <ClCompile Include="src\Editor\EditorLayer.cpp" />
+    <ClCompile Include="src\Editor\MooMooEngine.cpp" />
+    <ClCompile Include="src\GraphicsAPI\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\IO\Models\Mesh.cpp" />
+    <ClCompile Include="src\IO\Models\MeshRegistry.cpp" />
+    <ClCompile Include="src\IO\Models\Model.cpp" />
+    <ClCompile Include="src\ImGui\ImGuiBuild.cpp" />
+    <ClCompile Include="src\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Logging\Log.cpp" />
+    <ClCompile Include="src\MooMooEngine_PCH.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\Physics\BaseCollider.cpp" />
+    <ClCompile Include="src\Physics\PhysXBoxCollider.cpp" />
+    <ClCompile Include="src\Physics\PhysXSphereCollider.cpp" />
+    <ClCompile Include="src\Physics\PhysicsLayer.cpp" />
+    <ClCompile Include="src\Physics\RigidBodyComponent.cpp" />
+    <ClCompile Include="src\Platform\WindowsInput.cpp" />
+    <ClCompile Include="src\Platform\WindowsWindow.cpp" />
+    <ClCompile Include="src\Renderer\3D\Renderer3D.cpp" />
+    <ClCompile Include="src\Renderer\Camera\PerspectiveCamera.cpp" />
+    <ClCompile Include="src\Renderer\Camera\PerspectiveCameraController.cpp" />
+    <ClCompile Include="src\Renderer\Data\Framebuffer.cpp" />
+    <ClCompile Include="src\Renderer\ObjectRenderer\ObjectRendererLayer.cpp" />
+    <ClCompile Include="src\Renderer\Shader\Shader.cpp" />
+    <ClCompile Include="src\Renderer\Shader\ShaderLibrary.cpp" />
+    <ClCompile Include="src\Renderer\Textures\Texture2D.cpp" />
+    <ClCompile Include="src\Scene\Entity.cpp" />
+    <ClCompile Include="src\Scene\Scene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Middleware\GLFW\GLFW.vcxproj">
+      <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="Middleware\Glad\Glad.vcxproj">
+      <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="Middleware\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

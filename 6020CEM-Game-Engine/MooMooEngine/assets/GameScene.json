@@ -1,0 +1,90 @@
+{
+	"GameObjects" : 
+	{
+		"Sphere" : 
+		{
+			"Material component" : 
+			{
+				"Colour" : 
+				[
+					0.73451328277587891,
+					0.29250529408454895,
+					0.29250529408454895,
+					1.0
+				],
+				"Material Path" : ""
+			},
+			"Physics component" : 
+			{
+				"Gravity Enabled" : true,
+				"Is Kinematic" : false
+			},
+			"Shape component" : 
+			{
+				"Shape Type" : 5
+			},
+			"Tag" : "Sphere",
+			"Transform component" : 
+			{
+				"Position" : 
+				[
+					0.0,
+					-14.368496894836426,
+					0.0
+				],
+				"Rotation" : 
+				[
+					0.0,
+					0.0,
+					0.0
+				],
+				"Scale" : 
+				[
+					1.0,
+					1.0,
+					1.0
+				]
+			}
+		},
+		"Sphere 1" : 
+		{
+			"Material component" : 
+			{
+				"Colour" : 
+				[
+					1.0,
+					1.0,
+					1.0,
+					1.0
+				],
+				"Material Path" : ""
+			},
+			"Shape component" : 
+			{
+				"Shape Type" : 5
+			},
+			"Tag" : "Sphere 1",
+			"Transform component" : 
+			{
+				"Position" : 
+				[
+					0.0,
+					0.0,
+					0.0
+				],
+				"Rotation" : 
+				[
+					0.0,
+					0.0,
+					0.0
+				],
+				"Scale" : 
+				[
+					1.0,
+					1.0,
+					1.0
+				]
+			}
+		}
+	}
+}
