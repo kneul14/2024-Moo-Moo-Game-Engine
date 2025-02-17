@@ -1,0 +1,45 @@
+{
+	"GameObjects" : 
+	{
+		"Cone" : 
+		{
+			"Material component" : 
+			{
+				"Colour" : 
+				[
+					0.91150444746017456,
+					0.29039081931114197,
+					0.29039081931114197,
+					1.0
+				],
+				"Material Path" : ""
+			},
+			"Model component" : 
+			{
+				"Model Path" : "assets/models/cone.obj"
+			},
+			"Tag" : "Cone",
+			"Transform component" : 
+			{
+				"Position" : 
+				[
+					0.0,
+					0.0,
+					0.0
+				],
+				"Rotation" : 
+				[
+					0.0,
+					0.0,
+					0.0
+				],
+				"Scale" : 
+				[
+					0.30000001192092896,
+					0.30000001192092896,
+					0.30000001192092896
+				]
+			}
+		}
+	}
+}

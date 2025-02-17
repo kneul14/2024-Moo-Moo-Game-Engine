@@ -577,7 +577,6 @@ namespace MooMooEngine
 					dynamicBody->clearForce();
 				}
 
-
 			}
 			ImGui::TreePop();
 		}
@@ -872,6 +871,34 @@ namespace MooMooEngine
 				}
 
 				ImGui::EndMenu();
+			}
+
+			if (ImGui::Selectable("Add Script"))
+			{
+				ConsoleLogging("Opening Visual Studio to create a new script");
+
+				// Create a scripts folder if it doesn't already exist
+				//+1
+
+				// Open application to write a script, script should be saved in the scripts folder as a .cpp or .h
+				const std::string scriptName = "NewScript";
+				//ScriptManager* newScript = new ScriptManager(scriptName);
+
+				// Initialize scripts with starting functions like update()
+				//could use json to create a layout for each script
+
+
+				// Add script component to GO
+				//+1
+				ScriptComponent scriptComponent;
+				scriptComponent.name = scriptName;
+				scriptComponent.hasScriptComp = true;
+				scriptComponent.isVSNeeded = true;
+
+				m_Scene->m_Registry.emplace<ScriptComponent>(selectedEntity, scriptComponent);
+
+				// Cycle through the GOs with scripts and do their updates if the game is in play mode
+				//+1
 			}
 
 			ImGui::EndPopup();

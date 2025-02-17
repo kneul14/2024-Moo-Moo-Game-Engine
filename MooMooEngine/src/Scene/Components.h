@@ -129,6 +129,18 @@ namespace MooMooEngine
 		SphereColliderComponent(PhysXSphereCollider* physXSphereCollider_) : physXSphereCollider(physXSphereCollider_) {}; // Fixed constructor parameter name
 	};
 
+	struct ScriptComponent
+	{
+		bool hasScriptComp = false;
+		bool isVSNeeded = false;
+		std::string name;
+
+		ScriptComponent() = default;
+		ScriptComponent(const std::string& scriptName)
+			: name(scriptName), hasScriptComp(true) {};
+
+	};
+
 	//struct PlayerController {
 	//	PlayerControllerScript playerController;
 	//};

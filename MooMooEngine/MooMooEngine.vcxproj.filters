@@ -222,6 +222,7 @@
     <ClInclude Include="src\Scene\StateManager.h">
       <Filter>src\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="src\Scripting\ScriptManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Middleware\stb_image\stb_image.cpp">
@@ -326,5 +327,6 @@
     <ClCompile Include="src\Scene\Scene.cpp">
       <Filter>src\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="src\Scripting\ScriptManager.cpp" />
   </ItemGroup>
 </Project>

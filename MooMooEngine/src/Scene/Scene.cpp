@@ -133,5 +133,15 @@ namespace MooMooEngine {
 			if (entityModel.shape == Cube)		  m_Renderer3D->drawCube();
 			if (entityModel.shape == Sphere)      m_Renderer3D->drawSphere();
 		}
+
+		auto scriptsView = m_Registry.view<ScriptComponent>();
+		for (auto entity : scriptsView)
+		{
+			ScriptComponent& scripts = scriptsView.get<ScriptComponent>(entity);
+
+			// console log that the GO has a script attached
+			cout << "Script is attached" << endl;
+		}
+
 	}
 }

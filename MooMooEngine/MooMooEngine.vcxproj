@@ -209,6 +209,7 @@ IF EXIST "..\MooMooEngine\Middleware\dlls\PhysXFoundation_64.dll"\ (xcopy /Q /E 
     <ClInclude Include="src\Scene\Entity.h" />
     <ClInclude Include="src\Scene\Scene.h" />
     <ClInclude Include="src\Scene\StateManager.h" />
+    <ClInclude Include="src\Scripting\ScriptManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Middleware\stb_image\stb_image.cpp" />
@@ -247,6 +248,7 @@ IF EXIST "..\MooMooEngine\Middleware\dlls\PhysXFoundation_64.dll"\ (xcopy /Q /E 
     <ClCompile Include="src\Renderer\Textures\Texture2D.cpp" />
     <ClCompile Include="src\Scene\Entity.cpp" />
     <ClCompile Include="src\Scene\Scene.cpp" />
+    <ClCompile Include="src\Scripting\ScriptManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Middleware\GLFW\GLFW.vcxproj">

@@ -1,0 +1,125 @@
+{
+	"GameObjects" : 
+	{
+		"Cube" : 
+		{
+			"Material component" : 
+			{
+				"Colour" : 
+				[
+					1.0,
+					1.0,
+					1.0,
+					1.0
+				],
+				"Material Path" : ""
+			},
+			"Shape component" : 
+			{
+				"Shape Type" : 3
+			},
+			"Tag" : "Cube",
+			"Transform component" : 
+			{
+				"Position" : 
+				[
+					0.10000000149011612,
+					0.0,
+					-5.6999998092651367
+				],
+				"Rotation" : 
+				[
+					0.0,
+					0.0,
+					0.0
+				],
+				"Scale" : 
+				[
+					1.0,
+					1.0,
+					1.0
+				]
+			}
+		},
+		"Cube 1" : 
+		{
+			"Material component" : 
+			{
+				"Colour" : 
+				[
+					0.64601767063140869,
+					0.31157487630844116,
+					0.31157487630844116,
+					1.0
+				],
+				"Material Path" : ""
+			},
+			"Shape component" : 
+			{
+				"Shape Type" : 3
+			},
+			"Tag" : "Cube 1",
+			"Transform component" : 
+			{
+				"Position" : 
+				[
+					0.0,
+					-1.7000000476837158,
+					-5.6999998092651367
+				],
+				"Rotation" : 
+				[
+					0.0,
+					0.0,
+					0.0
+				],
+				"Scale" : 
+				[
+					1.0,
+					1.0,
+					1.0
+				]
+			}
+		},
+		"Sphere" : 
+		{
+			"Material component" : 
+			{
+				"Colour" : 
+				[
+					1.0,
+					1.0,
+					1.0,
+					1.0
+				],
+				"Material Path" : ""
+			},
+			"Shape component" : 
+			{
+				"Shape Type" : 5
+			},
+			"Tag" : "Sphere",
+			"Transform component" : 
+			{
+				"Position" : 
+				[
+					1.1000000238418579,
+					0.0,
+					0.0
+				],
+				"Rotation" : 
+				[
+					0.0,
+					0.0,
+					0.0
+				],
+				"Scale" : 
+				[
+					1.0,
+					1.0,
+					1.0
+				]
+			}
+		}
+	}
+}
