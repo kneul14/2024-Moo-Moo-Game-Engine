@@ -25,6 +25,7 @@ IncludeDir["entt"] = "MooMooEngine/Middleware/EnTT/include"
 IncludeDir["jsoncpp"] = "MooMooEngine/Middleware/jsoncpp"
 IncludeDir["PhysX"] = "MooMooEngine/Middleware/PhysX"
 IncludeDir["Enet"] = "MooMooEngine/Middleware/Enet"
+IncludeDir["FMOD"] = "MooMooEngine/Middleware/FMOD"
 
 
 --includes the premake5.lua file for middleware, effectively bringing it into this premake file
@@ -73,6 +74,7 @@ project "MooMooEngine"
 		"%{IncludeDir.jsoncpp}/include",
 		"%{IncludeDir.PhysX}/include",
 		"%{IncludeDir.Enet}/include",
+		"%{IncludeDir.FMOD}/inc",
 
 	}
 	libdirs
@@ -82,7 +84,8 @@ project "MooMooEngine"
 		"%{IncludeDir.assimp}/lib/windows/%{cfg.buildcfg}/",
 		"%{IncludeDir.jsoncpp}/lib",
 		"%{IncludeDir.PhysX}/lib",
-		"%{IncludeDir.Enet}/lib",	
+		"%{IncludeDir.Enet}/lib",
+		"%{IncludeDir.FMOD}/lib",	
 		
 	}
 
@@ -105,6 +108,8 @@ project "MooMooEngine"
 		"enet64.lib",
 		"Ws2_32.lib",  -- Add this line
         "Winmm.lib",  -- Add this line
+		"fmodL_vc.lib", 
+		"fmod_vc.lib",   
 	}
 
 	filter "system:windows"
@@ -123,6 +128,8 @@ project "MooMooEngine"
 		'{COPY} "../MooMooEngine/Middleware/dlls/PhysXCommon_64.dll" "%{cfg.targetdir}"',
 		'{COPY} "../MooMooEngine/Middleware/dlls/PhysXCooking.dll" "%{cfg.targetdir}"',
 		'{COPY} "../MooMooEngine/Middleware/dlls/PhysXFoundation_64.dll" "%{cfg.targetdir}"',
+		'{COPY} "../MooMooEngine/Middleware/dlls/fmod.dll" "%{cfg.targetdir}"',
+		'{COPY} "../MooMooEngine/Middleware/dlls/fmodL.dll" "%{cfg.targetdir}"',
 
 		}
 

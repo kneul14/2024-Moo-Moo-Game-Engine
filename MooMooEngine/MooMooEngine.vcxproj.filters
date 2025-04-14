@@ -76,6 +76,9 @@
     <Filter Include="src\Scene">
       <UniqueIdentifier>{0A06D2B3-7670-862A-BFAE-37D02B58647F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Scripting">
+      <UniqueIdentifier>{6FBC2D98-DB7C-A9CE-A4B7-F24B1037EEAA}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Middleware\stb_image\stb_image.h">
@@ -222,7 +225,9 @@
     <ClInclude Include="src\Scene\StateManager.h">
       <Filter>src\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="src\Scripting\ScriptManager.h" />
+    <ClInclude Include="src\Scripting\ScriptManager.h">
+      <Filter>src\Scripting</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Middleware\stb_image\stb_image.cpp">
@@ -327,6 +332,8 @@
     <ClCompile Include="src\Scene\Scene.cpp">
       <Filter>src\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="src\Scripting\ScriptManager.cpp" />
+    <ClCompile Include="src\Scripting\ScriptManager.cpp">
+      <Filter>src\Scripting</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
